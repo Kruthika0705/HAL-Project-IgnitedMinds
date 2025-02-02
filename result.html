@@ -1,0 +1,67 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Results</h1>
+        <p><strong>Product:</strong> {{ product_name }}</p>
+        <p><strong>Expiration Date:</strong> {{ expiration_date }}</p>
+        <p><strong>Days Until Expiration:</strong> {{ days_until_expiration }}</p>
+        <p><strong>Available Items in Stock:</strong> {{ total_items }}</p>
+        <p><strong>Wastage Prediction:</strong> {{ wastage_prediction }}</p>
+        <p><strong>Waste Probability:</strong> {{ waste_probability | round(2) }}</p>
+        <p><strong>Predicted Demand:</strong> {{ predicted_demand | round(2) }}</p>
+        <p><strong>Recommended Action:</strong> {{ recommended_action }}</p>
+        <p><strong>Adjusted Price per Item:</strong> ₹{{ adjusted_price_per_item | round(2) }}</p>
+
+        <a href="{{ url_for('index') }}">Make another prediction</a>
+    </div>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <img src="static/images/logo.jpeg" alt="Logo" class="logo">
+        <h1>Prediction Results</h1>
+    </header>
+
+    <main class="main-content">
+        <div class="result-card animated center-align">
+            <h2>Result Summary</h2>
+            <div class="result-item"><strong>Product:</strong> {{ product_name }}</div>
+            <div class="result-item"><strong>Expiration Date:</strong> {{ expiration_date }}</div>
+            <div class="result-item"><strong>Days Until Expiration:</strong> {{ days_until_expiration }}</div>
+            <div class="result-item"><strong>Available Items in Stock:</strong> {{ total_items }}</div>
+            <div class="result-item"><strong>Wastage Prediction:</strong> {{ wastage_prediction }}</div>
+            <div class="result-item"><strong>Waste Probability:</strong> {{ waste_probability | round(2) }}</div>
+            <div class="result-item"><strong>Predicted Demand:</strong> {{ predicted_demand | round(2) }}</div>
+            <div class="result-item"><strong>Recommended Action:</strong> {{ recommended_action }}</div>
+
+            {% if recommended_action == 'Donation' %}
+                <a class="btn donate-btn" href="/donation">Donate Now</a>
+            {% endif %}
+
+            <div class="result-item"><strong>Adjusted Price per Item:</strong> ₹{{ adjusted_price_per_item | round(2) }}</div>
+
+            <!-- Clear Call to Action -->
+            <a class="btn" href="{{ url_for('index') }}">Make another prediction</a>
+        </div>
+
+    </main>
+
+</body>
+</html>
+
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Charities</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 500px; /* Set height for the map */
+            border-radius: 10px; /* Rounded corners for the map */
+            border: 5px solid #007bff; /* Optional: Add a thick border around the map */
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <img src="static/images/logo.jpeg" alt="Logo" class="logo">
+        <h1>Nearby Donation Centers</h1>
+         <!-- Correctly placed logo -->
+    </div>
+
+    <div class="map-container animated">
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> <!-- Correctly load Leaflet.js -->
+    <script>
+        function initMap() {
+            const currentLocation = { lat: 12.9716, lng: 77.5946 }; // Example coordinates (Bangalore, India)
+            const map = L.map('map').setView(currentLocation, 14); // Initialize map at current location
+
+            // Add OpenStreetMap tile layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+
+            // Marker for current location
+            L.marker(currentLocation).addTo(map).bindPopup('You are here!').openPopup();
+
+            // Example nearby charity locations (replace with actual data)
+            const charities = [
+                { name: "Food Bank A", lat: 12.9, lng: 77.48 },
+                { name: "Food Bank B", lat: 12.8949, lng: 77.5401 },
+                { name: "Food Bank C", lat: 12.925007, lng: 77.5938 },
+                { name: "Food Bank D", lat: 12.9718, lng: 77.6411 },
+                { name: "Food Bank E", lat: 12.9373, lng: 77.554313 },
+                { name: "Food Bank F", lat: 13.005, lng: 77.5691 },
+                { name: "Food Bank G", lat: 12.9719, lng: 77.5327 },
+                { name: "Food Bank H", lat: 12.9065, lng: 77.5405 },
+                { name: "Food Bank I", lat: 12.9151, lng: 77.6102 }
+            ];
+
+            // Add markers for nearby charities
+            charities.forEach(charity => {
+                L.marker([charity.lat, charity.lng])
+                    .addTo(map)
+                    .bindPopup(`<strong>${charity.name}</strong><br>Address details here.`);
+            });
+        }
+
+        window.onload = initMap; // Initialize the map when the window loads
+    </script>
+
+</body>
+</html>

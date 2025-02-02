@@ -1,0 +1,240 @@
+/*body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: .5rem;
+}
+
+input[type=text], input[type=number] {
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+
+button {
+    padding: .5rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}*/
+/* General Styles */
+
+
+/* General Styles */
+/* General Styles */
+/* General Styles */
+/* General Styles */
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, blueviolet 0%, lightblue 100%); /* Light grey background */
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, deeppink 0%,orange 100%); /* Green background */
+    color: white;
+    text-align: center;
+    padding: 40px 20px; /* Increased padding for header */
+}
+
+.logo {
+    width: 120px; /* Set a fixed width for the logo */
+}
+
+
+h1 {
+    margin: 20px 0;
+    font-size:45px;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('https://example.com/your-background-image.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px; /* Increased padding for hero section */
+}
+
+.hero h1 {
+    font-size: 2.5em; /* Larger font size for the title */
+}
+
+.hero p {
+    font-size: 1.2em; /* Slightly larger font size for description */
+}
+
+/* Main Content Styles */
+.main-content {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+/* Form Container Styles */
+/* Form Container Styles */
+.form-container {
+    width: 90%; /* Set width to a percentage of the viewport */
+    max-width: 700px; /* Maximum width of the form container */
+    margin: 40px auto; /* Center the form horizontally and add vertical space */
+    padding: 30px;
+    background-color: white; /* White background for form */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Strong shadow for depth */
+}
+
+
+/* Form Element Styles */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+label {
+    margin-bottom: .5rem; /* Space between label and input */
+}
+
+input[type=text], input[type=number] {
+    padding: .75rem; /* Padding inside input fields */
+    margin-bottom: 1rem; /* Space between inputs */
+    border: 2px solid grey /* Green border to match theme */
+    border-radius: 5px; /* Rounded corners for inputs */
+}
+
+input[type=text]:focus, input[type=number]:focus {
+    border-color:indianred; /* Darker green on focus */
+}
+
+/* Button Styles */
+button, .btn {
+    padding: 1rem; /* Increase padding for a larger button */
+    background-color:maroon; /* Blue button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Set width to fill the container */
+    max-width: 700px; /* Maximum width of the button */
+    margin: 20px auto; /* Center the button horizontally with space above and below */
+}
+
+
+button:hover, .btn:hover {
+   background-color: #0056b3; /* Darker blue on hover */
+   transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Result Card Styles */
+/* Result Card Styles */
+.result-card {
+    max-width: 900px; /* Increased maximum width of the result card */
+    width: 100%; /* Ensure it takes full width up to max-width */
+    margin: 40px auto; /* Center the result card horizontally with vertical space */
+    padding: 20px;
+    border-radius: 12px; 
+    background-color: #ffffff; /* White background for results */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Strong shadow for depth */
+    text-align: center; /* Center align text in result card */
+}
+
+
+/* Center Align Class for Result Card Items */
+.center-align {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Result Item Styles */
+.result-item {
+    width: 100%; /* Full width for each item */
+    margin: 10px 0; /* Space between items */
+    font-size: 1.1em; /* Slightly larger font size for readability */
+}
+
+/* Button Styles */
+button, .btn {
+   padding: .75rem;
+   background-color: #007bff; /* Blue button color */
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   text-align: center;
+   text-decoration: none;
+   transition: background-color 0.3s ease, transform 0.2s ease;
+   width: 90%; /* Set width to a percentage of the viewport */
+   max-width: 700px; /* Maximum width of the button */
+   margin: 20px auto; /* Center the button horizontally with vertical spacing */
+}
+
+/* Animation Styles */
+.animated {
+   animation: fadeInUp 0.5s ease forwards; 
+   opacity: 0; 
+   transform: translateY(20px); 
+}
+
+@keyframes fadeInUp {
+   to { 
+       opacity: 1; 
+       transform: translateY(0); 
+   }
+}
+
+/* Error Message Styles */
+.error {
+   color: red; /* Error message color */
+}
+/* Map Container Styles */
+.map-container {
+    max-width: 1200px; /* Limit the width of the map container */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Padding around the map */
+    border: 5px solid #007bff; /* Thick blue border */
+    border-radius: 10px; /* Rounded corners for the border */
+    background-color: white; /* Optional: white background for contrast */
+}
+
+/* Map Styles */
+#map {
+    height: 100px; /* Set height for the map */
+    border-radius: 10px; /* Rounded corners for the map */
+}

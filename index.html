@@ -1,0 +1,114 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Wastage Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Food Wastage Prediction Tool</h1>
+        <form action="/predict" method="POST">
+            <label for="product_name">Product Name:</label>
+            <input type="text" id="product_name" name="product_name" required>
+
+            <label for="expiration_date">Expiration Date (DD-MM-YYYY):</label>
+            <input type="text" id="expiration_date" name="expiration_date" required>
+
+            <label for="seasonality">Seasonality (e.g., Winter, Summer):</label>
+            <input type="text" id="seasonality" name="seasonality" required>
+
+            <label for="total_items">Total Items in Stock:</label>
+            <input type="number" id="total_items" name="total_items" required>
+
+            <button type="submit">Predict Wastage</button>
+        </form>
+        
+        {% if error %}
+          <p style="color:red;">{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodQuest: AI-Driven Sustainable Food Journey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Food Wastage Prediction Tool</h1>
+            <form action="/predict" method="POST" class="animate__animated animate__fadeInUp">
+                <label for="product_name">Product Name:</label>
+                <input type="text" id="product_name" name="product_name" required>
+
+                <label for="expiration_date">Expiration Date (DD-MM-YYYY):</label>
+                <input type="text" id="expiration_date" name="expiration_date" required>
+
+                <label for="seasonality">Seasonality (e.g., Winter, Summer):</label>
+                <input type="text" id="seasonality" name="seasonality" required>
+
+                <label for="total_items">Total Items in Stock:</label>
+                <input type="number" id="total_items" name="total_items" required>
+
+                <button type="submit">Predict Wastage</button>
+            </form>
+            
+            {% if error %}
+              <p class="error animate__animated animate__shakeX">{{ error }}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Waste Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header class="header">
+        <img src="static/images/logo.jpeg" alt="Logo" class="logo">
+        <h1>FoodQuest: AI-Driven Sustainable Food Journey</h1>
+        <h2>Let us build this world to be a better place to live.</h2>
+    </header>
+
+    <main class="main-content">
+        <div class="form-container animated">
+            <form action="/predict" method="POST">
+                <h2>Predict Wastage</h2>
+                <label for="product_name">Product Name:</label>
+                <input type="text" id="product_name" name="product_name" required>
+
+                <label for="expiration_date">Expiration Date (DD-MM-YYYY):</label>
+                <input type="text" id="expiration_date" name="expiration_date" required>
+
+                <label for="seasonality">Seasonality (e.g., Winter, Summer):</label>
+                <input type="text" id="seasonality" name="seasonality" required>
+
+                <label for="total_items">Total Items in Stock:</label>
+                <input type="number" id="total_items" name="total_items" required>
+
+                <button type="submit">Predict Wastage</button>
+            </form>
+
+            {% if error %}
+              <p class="error">{{ error }}</p>
+            {% endif %}
+        </div>
+    </main>
+
+    <!-- Optional JavaScript for animations -->
+    <script src="{{ url_for('static', filename='js/animations.js') }}"></script>
+</body>
+</html>
+
