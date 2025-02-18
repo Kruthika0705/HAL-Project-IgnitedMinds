@@ -1,4 +1,4 @@
-This project was developed for HACK-A-LEAGUE, a hackathon conduCted at Global Academy of Technology, Bangalore.
+This project was developed for HACK-A-LEAGUE, a hackathon conducted at Global Academy of Technology, Bangalore.
 
 Team memebers:
 Joshika K
